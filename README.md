@@ -33,21 +33,36 @@ public class NumberFun {
 The best design solution, which is different from mine.
 
 
-### Task 7kyu:
+### Task 8 kyu:
 
+Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. 
+Return the result rounded to two decimals.
 
+[Task link](https://www.codewars.com/kata/5748838ce2fab90b86001b1a)
 
-[Task link](https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/java)
+### My solution:
 
-#### Solution:
+```
+public class Geometry{
+  public static double squareArea(double A){
+    double B = 2* A / Math.PI;
+    B *= B;
+    String formattDouble = String.format("%.2f", B);
+    B = Double.parseDouble(formattDouble);
+    return B;
+  }
+}
 ```
 
-```
+### Fav solution:
 
-#### Fav solution:
 ```
-
+public class Geometry{
+  public static double squareArea(double A) {
+    return Math.round(400 * A * A / 3.141592 / 3.141592) / 100.;
+  }
+}
 ```
 
 #### Comment:
-The best design solution, which is different from mine.
+The person did not try to solve through Math.Pi, but simply wrote.
